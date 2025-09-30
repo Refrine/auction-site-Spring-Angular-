@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Data
@@ -16,6 +17,16 @@ public class Auction {
     @ManyToOne
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    private String title;
 
 
     private LocalDateTime startTime;
@@ -71,8 +82,10 @@ public class Auction {
     @OneToMany(mappedBy = "auction")
     private Set<Bid> bids;
 
-    // Конструкторы, геттеры и сеттеры
+
 
     public Auction() {
     }
+
+
 }

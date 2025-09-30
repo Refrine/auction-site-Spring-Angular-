@@ -29,7 +29,7 @@ public class UserDto {
     private String username;
     private String email;
 
-    public UserDto() {
+    public UserDto(Long id, String username) {
     }
 
     public UserDto(Long id, String username, String email) {

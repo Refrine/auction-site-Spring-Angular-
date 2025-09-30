@@ -4,6 +4,8 @@ package com.example.auction.models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Set;
+
 @Entity
 @Data
 public class Product {

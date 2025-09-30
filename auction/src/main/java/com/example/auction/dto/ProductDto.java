@@ -6,7 +6,7 @@ public class ProductDto {
     private String description;
     private Double startingPrice;
 
-    public ProductDto() {
+    public ProductDto(Long id, String description, String name) {
     }
 
     public ProductDto(Long id, String name, String description, Double startingPrice) {
