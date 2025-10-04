@@ -1,0 +1,17 @@
+<app-header [title]="title"></app-header>
+
+<h1 (dblclick)="showAlert()">мои заметки</h1>
+
+<ul>
+  <li *ngFor="let note of notes()">
+      <strong>{{ note.title }}</strong>
+      {{ note.content }}
+      <small>{{ note.createdAt | date:'short' }}</small>
+  </li>
+</ul>
+
+<h2>add</h2>
+<input type="text" [(ngModel)]="newNote().title" placeholder="zagolovok">
+
+
+<app-footer (SubscribeClicked)="handleSubscribe()"></app-footer>

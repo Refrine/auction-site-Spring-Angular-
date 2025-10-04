@@ -74,4 +74,11 @@ public class Product {
     public Product(){
 
     }
+
+    public void setTitle() {
+    }
+
+    public String getTitle() {
+        return getTitle();
+    }
 }
